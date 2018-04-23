@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Algorithms/Algorithms.iml" filepath="$PROJECT_DIR$/Algorithms/Algorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DBTestDay1/DBTestDay1.iml" filepath="$PROJECT_DIR$/DBTestDay1/DBTestDay1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyTest.iml" filepath="$PROJECT_DIR$/MyTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Synchronized/Synchronized.iml" filepath="$PROJECT_DIR$/Synchronized/Synchronized.iml" />
+    </modules>
+  </component>
+</project>
