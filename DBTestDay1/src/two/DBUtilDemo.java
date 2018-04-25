@@ -34,6 +34,19 @@ public class DBUtilDemo {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
+        //获取一个用来执行SQL语句的对象   QueryRunner
+        QueryRunner qr = new QueryRunner(JDBCUtil.getDataSource());
+        String sql = "INSERT INTO day01(id,username,password) VALUES(?,?,?)";
+        Object[] params = {3, "TOM", "123456"};
+        int line = 0;// 用来完成表数据的增加、删除、更新操作
+        try {
+            line = qr.update(sql, params);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        //结果集处理
+        System.out.println("line = " + line);
     }
 
     /**

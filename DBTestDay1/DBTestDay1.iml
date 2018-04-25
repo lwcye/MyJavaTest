@@ -18,5 +18,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="mysql-connector-java-5.1.37-bin" level="project" />
     <orderEntry type="library" exported="" name="commons-dbutils-1.6" level="project" />
+    <orderEntry type="library" exported="" name="commons-pool-1.5.6" level="project" />
+    <orderEntry type="library" exported="" name="commons-dbcp-1.4" level="project" />
   </component>
 </module>

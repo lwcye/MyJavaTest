@@ -1,5 +1,7 @@
 package one;
 
+import org.apache.commons.dbcp.BasicDataSource;
+
 import java.io.FileReader;
 import java.io.Reader;
 import java.sql.Connection;
@@ -11,6 +13,10 @@ public class JDBCUtil {
     private static String url;
     private static String user;
     private static String password;
+    /*
+     * 创建连接池BasicDataSource
+     */
+    public static BasicDataSource dataSource = new BasicDataSource();
 
     // 静态代码块
     static {
@@ -25,9 +31,23 @@ public class JDBCUtil {
             url = props.getProperty("url");
             user = props.getProperty("user");
             password = props.getProperty("password");
+
+            dataSource.setDriverClassName(driver);
+            dataSource.setUrl(url);
+            dataSource.setUsername(user);
+            dataSource.setPassword(password);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    /**
+     * 返回连接池对象
+     *
+     * @return BasicDataSource
+     */
+    public static BasicDataSource getDataSource() {
+        return dataSource;
     }
 
     /**
