@@ -55,4 +55,25 @@ public class ZhangWu {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public ZhangWu(int zwid, String flname, double money,  String zhangHu,String createtime, String description) {
+        this.zwid = zwid;
+        this.flname = flname;
+        this.zhangHu = zhangHu;
+        this.money = money;
+        this.createtime = createtime;
+        this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "ZhangWu{" +
+                "zwid=" + zwid +
+                ", flname='" + flname + '\'' +
+                ", zhangHu='" + zhangHu + '\'' +
+                ", money=" + money +
+                ", createtime='" + createtime + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }

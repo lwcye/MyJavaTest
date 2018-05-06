@@ -1,5 +1,6 @@
 package two;
 
+import gjp.domain.ZhangWu;
 import one.JDBCUtil;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.ArrayHandler;
@@ -140,10 +141,10 @@ public class DBUtilDemo {
             //创建一个QueryRunner对象，用来完成SQL语句的执行
             QueryRunner qr = new QueryRunner();
             //执行SQL语句
-            String sql = "select * FROM day01";
+            String sql = "select * FROM gjp_zhangwu";
             Object[] params = {};
             Connection conn = JDBCUtil.getConnection();
-            List<day01Bean> query = qr.query(conn, sql, new BeanListHandler<>(day01Bean.class), params);
+            List<ZhangWu> query = qr.query(conn, sql, new BeanListHandler<>(ZhangWu.class), params);
             //结果集的处理
             System.out.println(query);
 
